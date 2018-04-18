@@ -1,6 +1,5 @@
 package com.easy.fias.common.utils;
 
-import com.easy.fias.common.utils.DateFormatter;
 import org.apache.log4j.Logger;
 import org.springframework.core.convert.converter.Converter;
 

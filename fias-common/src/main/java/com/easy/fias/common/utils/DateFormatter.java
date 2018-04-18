@@ -7,8 +7,8 @@ import java.text.SimpleDateFormat;
 public class DateFormatter {
   private static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
 
-  public static SimpleDateFormat getDateFormat(){
-    return  simpleDateFormat;
+  public static SimpleDateFormat getDateFormat() {
+    return simpleDateFormat;
   }
 
   public static String format(Timestamp timestamp) {
