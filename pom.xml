@@ -19,6 +19,10 @@
   <modules>
     <module>fias-common</module>
     <module>fias-server-app</module>
+    <module>fias-database</module>
+    <module>fias-api</module>
+    <module>fias-bl</module>
+    <module>fias-dal</module>
   </modules>
 
   <properties>
@@ -35,11 +39,42 @@
 
   <dependencies>
     <dependency>
+      <groupId>org.quartz-scheduler</groupId>
+      <artifactId>quartz</artifactId>
+      <version>${quartz.version}</version>
+    </dependency>
+
+    <!-- QuartzJobBean in spring-context-support.jar -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.14.8</version>
       <scope>provided</scope>
     </dependency>
+
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
@@ -50,6 +85,12 @@
       <version>1.2</version>
     </dependency>
   </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <plugins>

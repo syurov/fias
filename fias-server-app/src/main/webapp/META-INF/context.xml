@@ -1,6 +1,4 @@
 <?xml version='1.0' encoding='utf-8'?>
-
 <Context>
-
-
+  <ResourceLink name="jdbc/ds" global="jdbc/ds-04" type="javax.sql.DataSource"/>
 </Context>

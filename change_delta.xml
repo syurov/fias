@@ -1,0 +1,3009 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="syurov (generated)" id="1524061052258-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_actstat">
+            <column name="actstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_centerst">
+            <column name="centerstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-4" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_curentst">
+            <column name="curentstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-5" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-6" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-7" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-8" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-9" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_eststat">
+            <column name="eststatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-10" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-11" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-12" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_hststat">
+            <column name="housestid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-13" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_intvstat">
+            <column name="intvstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-14" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_landmark">
+            <column name="location" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-15" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_ndoctype">
+            <column name="ndtypeid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-16" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-17" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_operstat">
+            <column name="operstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-18" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_socrbase">
+            <column name="level" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scname" type="TEXT"/>
+            <column name="socrname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kod_t_st" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061052258-19" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_strstat">
+            <column name="strstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_actstat">
+            <column name="actstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_centerst">
+            <column name="centerstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-4" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_curentst">
+            <column name="curentstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-5" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-6" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-7" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-8" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-9" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_eststat">
+            <column name="eststatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-10" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-11" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-12" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_hststat">
+            <column name="housestid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-13" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_intvstat">
+            <column name="intvstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-14" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_landmark">
+            <column name="location" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-15" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_ndoctype">
+            <column name="ndtypeid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-16" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-17" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_operstat">
+            <column name="operstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-18" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_socrbase">
+            <column name="level" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scname" type="TEXT"/>
+            <column name="socrname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kod_t_st" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061191207-19" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_strstat">
+            <column name="strstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_actstat">
+            <column name="actstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_centerst">
+            <column name="centerstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-4" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_curentst">
+            <column name="curentstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-5" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-6" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-7" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-8" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-9" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_eststat">
+            <column name="eststatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-10" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-11" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-12" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_hststat">
+            <column name="housestid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-13" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_intvstat">
+            <column name="intvstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-14" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_landmark">
+            <column name="location" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-15" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_ndoctype">
+            <column name="ndtypeid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-16" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-17" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_operstat">
+            <column name="operstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-18" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_socrbase">
+            <column name="level" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scname" type="TEXT"/>
+            <column name="socrname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kod_t_st" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061361845-19" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_strstat">
+            <column name="strstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_actstat">
+            <column name="actstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_centerst">
+            <column name="centerstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-4" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_curentst">
+            <column name="curentstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-5" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-6" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-7" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-8" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-9" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_eststat">
+            <column name="eststatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-10" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-11" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-12" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_hststat">
+            <column name="housestid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-13" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_intvstat">
+            <column name="intvstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-14" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_landmark">
+            <column name="location" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-15" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_ndoctype">
+            <column name="ndtypeid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-16" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-17" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_operstat">
+            <column name="operstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-18" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_socrbase">
+            <column name="level" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scname" type="TEXT"/>
+            <column name="socrname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kod_t_st" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061714159-19" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_strstat">
+            <column name="strstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_actstat">
+            <column name="actstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_centerst">
+            <column name="centerstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-4" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_curentst">
+            <column name="curentstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-5" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-6" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-7" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-8" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-9" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_eststat">
+            <column name="eststatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-10" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-11" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-12" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_hststat">
+            <column name="housestid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-13" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_intvstat">
+            <column name="intvstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-14" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_landmark">
+            <column name="location" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-15" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_ndoctype">
+            <column name="ndtypeid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-16" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-17" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_operstat">
+            <column name="operstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-18" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_socrbase">
+            <column name="level" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scname" type="TEXT"/>
+            <column name="socrname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kod_t_st" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524061994266-19" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_strstat">
+            <column name="strstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-1" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_actstat">
+            <column name="actstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-2" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-3" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_centerst">
+            <column name="centerstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-4" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_curentst">
+            <column name="curentstid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-5" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_addrobj">
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="formalname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="regioncode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autocode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="areacode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="citycode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ctarcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="placecode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="streetcode" type="TEXT"/>
+            <column name="extrcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sextcode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="offname" type="TEXT"/>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aolevel" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parentguid" type="TEXT"/>
+            <column name="aoid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="previd" type="TEXT"/>
+            <column name="nextid" type="TEXT"/>
+            <column name="code" type="TEXT"/>
+            <column name="plaincode" type="TEXT"/>
+            <column name="actstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="centstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="operstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="livestatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-6" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-7" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-8" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_del_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-9" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_eststat">
+            <column name="eststatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-10" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_house">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="housenum" type="TEXT"/>
+            <column name="eststatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="buildnum" type="TEXT"/>
+            <column name="strucnum" type="TEXT"/>
+            <column name="strstatus" type="INT"/>
+            <column name="houseid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="statstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-11" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_houseint">
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstart" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intend" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="houseintid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="intstatus" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+            <column name="counter" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-12" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_hststat">
+            <column name="housestid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-13" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_intvstat">
+            <column name="intvstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-14" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_landmark">
+            <column name="location" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="postalcode" type="TEXT"/>
+            <column name="ifnsfl" type="TEXT"/>
+            <column name="terrifnsfl" type="TEXT"/>
+            <column name="ifnsul" type="TEXT"/>
+            <column name="terrifnsul" type="TEXT"/>
+            <column name="okato" type="TEXT"/>
+            <column name="oktmo" type="TEXT"/>
+            <column name="updatedate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="landguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="aoguid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="startdate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enddate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="normdoc" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-15" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_ndoctype">
+            <column name="ndtypeid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-16" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_normdoc">
+            <column name="normdocid" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docname" type="TEXT"/>
+            <column name="docdate" type="date"/>
+            <column name="docnum" type="TEXT"/>
+            <column name="doctype" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="docimgid" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-17" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_operstat">
+            <column name="operstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-18" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_socrbase">
+            <column name="level" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scname" type="TEXT"/>
+            <column name="socrname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kod_t_st" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="syurov (generated)" id="1524062475588-19" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+        <createTable tableName="fias_strstat">
+            <column name="strstatid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="shortname" type="TEXT"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
     <artifactId>fias-postgres</artifactId>
@@ -18,7 +18,19 @@
 
     <dependency>
       <groupId>com.easy.fias</groupId>
+      <artifactId>fias-api</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.easy.fias</groupId>
       <artifactId>fias-common</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.easy.fias</groupId>
+      <artifactId>fias-database</artifactId>
       <version>0.1.0-SNAPSHOT</version>
     </dependency>
 
@@ -48,17 +60,12 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-tx</artifactId>
-      <version>4.2.5.RELEASE</version>
     </dependency>
 
-    <dependency>
-      <groupId>com.easy.fias</groupId>
-      <artifactId>fias-common</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
-    </dependency>
 
     <dependency>
       <groupId>javax.annotation</groupId>
@@ -67,9 +74,8 @@
     </dependency>
 
     <dependency>
-      <groupId>com.microsoft.sqlserver</groupId>
-      <artifactId>mssql-jdbc</artifactId>
-      <version>6.1.0.jre7</version>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
       <scope>provided</scope>
     </dependency>
 
@@ -87,19 +93,19 @@
 
         <configuration>
           <update>true</update>
-          <contextFile>../../tomcat/Context.xml</contextFile>
+          <contextFile>../tomcat/Context.xml</contextFile>
           <mode>war</mode>
           <uriEncoding>UTF-8</uriEncoding>
           <path>/server</path>
-          <port>9117</port>
+          <port>9118</port>
         </configuration>
 
 
         <dependencies>
           <dependency>
-            <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>mssql-jdbc</artifactId>
-            <version>6.1.0.jre7</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.1.4.jre7</version>
           </dependency>
 
         </dependencies>
