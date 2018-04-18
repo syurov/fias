@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE etl SYSTEM "http://scriptella.javaforge.com/dtd/etl.dtd">
+<etl>
+  <description>
+    Загрузка данных из xml-файла в предварительно созданную таблицу
+  </description>
+
+
+  <connection id="in" driver="janino"/>
+  <connection id="out" driver="spring" url="fiasDataSource">autocommit.size=100</connection>
+
+  <query connection-id="in">
+    import javax.xml.parsers.SAXParser;
+    import javax.xml.parsers.SAXParserFactory;
+    import org.xml.sax.Attributes;
+    import org.xml.sax.SAXException;
+    import org.xml.sax.helpers.DefaultHandler;
+
+    SAXParserFactory factory = SAXParserFactory.newInstance();
+    SAXParser saxParser = factory.newSAXParser();
+
+    DefaultHandler handler = new DefaultHandler() {
+    boolean isObject = false;
+    int nodeCnt = 0;
+    int recordCnt = 0;
+
+    public void startElement(String uri, String localName,String qName, Attributes attr) throws SAXException {
+    if (nodeCnt &lt; 1) { // skip first node
+    nodeCnt++;
+    } else {
+    String names = "";
+    String values = "";
+
+    int attrCnt = attr.getLength();
+    for (int i=0; i &lt; attrCnt; i++) {
+    names += attr.getQName(i) + ",";
+    values += "'" + attr.getValue(i).replaceAll("'", "''") + "',";
+    }
+
+    names = names.substring(0, names.length()-1);
+    values = values.substring(0, values.length()-1);
+    set("sql_names", names);
+    set("sql_values", values);
+    <script connection-id="out">
+      INSERT INTO ${table} ($sql_names) VALUES ($sql_values);
+    </script>
+    next();
+
+    recordCnt++;
+    System.out.print("\r" + get("file").toString() + " processed: " + recordCnt);
+    }
+    }
+    };
+
+    String filename = get("file").toString();
+    System.out.println("\n\n\nConverting...");
+    saxParser.parse(filename, handler);
+  </query>
+</etl>
