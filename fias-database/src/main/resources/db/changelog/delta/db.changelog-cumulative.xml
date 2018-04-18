@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <include file="_fias_schema_create.xml" relativeToChangelogFile="true"/>
+
+  <include file="tables\fias_actstat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_addrobj.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_centerst.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_curentst.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_eststat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_house.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_houseint.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_hststat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_intvstat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_landmark.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_ndoctype.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_normdoc.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_operstat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_socrbase.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_strstat.xml" relativeToChangelogFile="true"/>
+
+  <include file="tables\fias_del_addrobj.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_del_house.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_del_houseint.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_del_normdoc.xml" relativeToChangelogFile="true"/>
+
+  <include file="storedProcedures/loader_delta_actstat.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_addrobj.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_centerst.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_curentst.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_eststat.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_house.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_houseint.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_hststat.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_intvstat.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_landmark.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_ndoctype.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_normdoc.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_operstat.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_socrbase.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/loader_delta_strstat.xml" relativeToChangelogFile="true"/>
+
+
+</databaseChangeLog>

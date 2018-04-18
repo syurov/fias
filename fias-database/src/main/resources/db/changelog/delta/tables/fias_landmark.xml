@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <changeSet author="syurov (generated)" id="fias_landmark">
+    <createTable tableName="fias_landmark" schemaName="delta">
+      <column name="landid" type="uuid">
+        <constraints nullable="false"/>
+      </column>
+      <column name="landguid" type="uuid">
+        <constraints nullable="false"/>
+      </column>
+      <column name="aoguid" type="uuid">
+        <constraints nullable="false"/>
+      </column>
+      <column name="normdoc" type="uuid"/>
+
+      <column name="location" type="varchar(500)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="postalcode" type="varchar(6)"/>
+      <column name="ifnsfl" type="varchar(4)"/>
+      <column name="terrifnsfl" type="varchar(4)"/>
+      <column name="ifnsul" type="varchar(4)"/>
+      <column name="terrifnsul" type="varchar(4)"/>
+      <column name="okato" type="varchar(11)"/>
+      <column name="oktmo" type="varchar(11)"/>
+      <column name="updatedate" type="date">
+        <constraints nullable="false"/>
+      </column>
+
+      <column name="startdate" type="date">
+        <constraints nullable="false"/>
+      </column>
+      <column name="enddate" type="date">
+        <constraints nullable="false"/>
+      </column>
+
+    </createTable>
+  </changeSet>
+</databaseChangeLog>

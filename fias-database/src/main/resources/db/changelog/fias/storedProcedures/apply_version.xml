@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <changeSet author="syurov" id="apply_version" runOnChange="true" runAlways="true">
+    <sqlFile path="apply_version.sql" relativeToChangelogFile="true"
+             splitStatements="false"/>
+    <rollback>
+      <sql>DROP FUNCTION fias.apply_version(integer, character varying);</sql>
+    </rollback>
+
+  </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <changeSet author="syurov" id="delta_clear" runOnChange="true" runAlways="true">
+    <sqlFile path="delta_clear.sql" relativeToChangelogFile="true"
+             splitStatements="false"/>
+    <rollback>
+      <sql>DROP FUNCTION fias.delta_clear();</sql>
+    </rollback>
+
+  </changeSet>
+</databaseChangeLog>

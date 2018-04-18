@@ -1,0 +1,129 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+
+  <changeSet author="syurov (generated)" id="1524034023134-19">
+    <createIndex indexName="FIAS_AOBJECT_IDX" tableName="fias_addrobj_view" unique="true">
+      <column name="id"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-20">
+    <createIndex indexName="FIAS_AOBJECT_VIEW_AOGUID_IDX" tableName="fias_addrobj_view">
+      <column name="uid"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-21">
+    <createIndex indexName="FIAS_AOBJECT_VIEW_AOLEVEL_IDX" tableName="fias_addrobj_view">
+      <column name="level"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-22">
+    <createIndex indexName="FIAS_AOBJECT_VIEW_NAME_IDX" tableName="fias_addrobj_view">
+      <column name="name"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-23">
+    <createIndex indexName="FIAS_AOBJECT_VIEW_NAME_UPPER_IDX" tableName="fias_addrobj_view"/>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-24">
+    <createIndex indexName="FIAS_AOBJECT_VIEW_ORDERNUM_IDX" tableName="fias_addrobj_view">
+      <column name="ordernum"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-25">
+    <createIndex indexName="FIAS_AOBJECT_VIEW_ORDERNUM_IDX_2" tableName="fias_addrobj_view">
+      <column computed="true" name="(level &lt;= 6)"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-26">
+    <createIndex indexName="FIAS_AOBJECT_VIEW_ORDERNUM_IDX_3" tableName="fias_addrobj_view">
+      <column computed="true" name="(level &lt;= 7)"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-27">
+    <createIndex indexName="FIAS_AOBJECT_VIEW_PARENTGUID2_IDX" tableName="fias_addrobj_view">
+      <column name="parentid2"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-28">
+    <createIndex indexName="FIAS_AOBJECT_VIEW_PARENTGUID3_IDX" tableName="fias_addrobj_view">
+      <column name="parentid3"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-29">
+    <createIndex indexName="FIAS_AOBJECT_VIEW_PARENTGUID_IDX" tableName="fias_addrobj_view">
+      <column name="parentid"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-30">
+    <createIndex indexName="fias_addrobj_idx_01" tableName="fias_addrobj">
+      <column name="aolevel"/>
+      <column name="actstatus"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-31">
+    <createIndex indexName="fias_addrobj_idx_02" tableName="fias_addrobj">
+      <column name="aolevel"/>
+      <column name="offname"/>
+      <column name="shortname"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-32">
+    <createIndex indexName="fias_addrobj_idx_03" tableName="fias_addrobj">
+      <column computed="true" name="((aolevel &lt;= 6) AND (actstatus = 1))"/>
+      <column computed="true" name="((aolevel &lt;= 6) AND (actstatus = 1))"/>
+      <column computed="true" name="((aolevel &lt;= 6) AND (actstatus = 1))"/>
+      <column computed="true" name="((aolevel &lt;= 6) AND (actstatus = 1))"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-33">
+    <createIndex indexName="fias_addrobj_idx_09" tableName="fias_addrobj">
+      <column computed="true" name="((aolevel &lt;= 6) AND (actstatus = 1))"/>
+      <column computed="true" name="((aolevel &lt;= 6) AND (actstatus = 1))"/>
+      <column computed="true" name="((aolevel &lt;= 6) AND (actstatus = 1))"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-34">
+    <createIndex indexName="fias_addrobj_idx_13" tableName="fias_addrobj">
+      <column computed="true" name="((aolevel &lt;= 6) AND (actstatus = 1))"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-35">
+    <createIndex indexName="fias_addrobj_idx_14" tableName="fias_addrobj">
+      <column name="aoid"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-36">
+    <createIndex indexName="fias_addrobj_idx_15" tableName="fias_addrobj">
+      <column name="aoguid"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-37">
+    <createIndex indexName="fias_addrobj_view_idx_01" tableName="fias_addrobj_view">
+      <column name="ordernum"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-38">
+    <createIndex indexName="fias_house_aoguid_idx" tableName="fias_house">
+      <column name="aoguid"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-39">
+    <createIndex indexName="fias_house_idx" tableName="fias_house">
+      <column name="houseid"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-40">
+    <createIndex indexName="fias_house_idx_01" tableName="fias_house">
+      <column name="aoguid"/>
+      <column name="housenum"/>
+    </createIndex>
+  </changeSet>
+  <changeSet author="syurov (generated)" id="1524034023134-41">
+    <createIndex indexName="fias_house_num_idx" tableName="fias_house">
+      <column name="housenum"/>
+    </createIndex>
+  </changeSet>
+</databaseChangeLog>

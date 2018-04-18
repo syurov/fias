@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <include file="_fias_schema_create.xml" relativeToChangelogFile="true"/>
+
+  <include file="tables\fias_actstat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_addrobj.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_centerst.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_curentst.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_eststat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_house.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_houseint.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_hststat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_intvstat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_landmark.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_ndoctype.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_normdoc.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_operstat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_socrbase.xml" relativeToChangelogFile="true"/>
+  <include file="tables\fias_strstat.xml" relativeToChangelogFile="true"/>
+  <include file="tables\version.xml" relativeToChangelogFile="true"/>
+
+
+  <include file="storedProcedures/apply_version.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/clear.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/create_indexes.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/delete_indexes.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/delta_clear.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/fill_addrobj_view.xml" relativeToChangelogFile="true"/>
+  <include file="storedProcedures/get_last_version.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

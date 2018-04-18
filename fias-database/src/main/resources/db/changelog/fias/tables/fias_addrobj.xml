@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <changeSet author="syurov (generated)" id="fias_addrobj">
+    <createTable tableName="fias_addrobj" schemaName="fias">
+      <column name="aoguid" type="uuid">
+        <constraints nullable="false"/>
+      </column>
+      <column name="parentguid" type="uuid"/>
+      <column name="aoid" type="uuid">
+        <constraints nullable="false"/>
+      </column>
+      <column name="previd" type="uuid"/>
+      <column name="nextid" type="uuid"/>
+      <column name="normdoc" type="uuid"/>
+
+
+      <column name="formalname" type="varchar(120)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="regioncode" type="varchar(2)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="autocode" type="varchar(1)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="areacode" type="varchar(3)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="citycode" type="varchar(3)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="ctarcode" type="varchar(3)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="placecode" type="varchar(3)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="streetcode" type="varchar(4)"/>
+      <column name="extrcode" type="varchar(4)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="sextcode" type="varchar(3)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="offname" type="varchar(120)"/>
+      <column name="postalcode" type="varchar(6)"/>
+      <column name="ifnsfl" type="varchar(4)"/>
+      <column name="terrifnsfl" type="varchar(4)"/>
+      <column name="ifnsul" type="varchar(4)"/>
+      <column name="terrifnsul" type="varchar(4)"/>
+      <column name="okato" type="varchar(11)"/>
+      <column name="oktmo" type="varchar(11)"/>
+      <column name="updatedate" type="date">
+        <constraints nullable="false"/>
+      </column>
+      <column name="shortname" type="varchar(10)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="aolevel" type="INT">
+        <constraints nullable="false"/>
+      </column>
+      <column name="code" type="varchar(17)"/>
+      <column name="plaincode" type="varchar(15)"/>
+      <column name="actstatus" type="INT">
+        <constraints nullable="false"/>
+      </column>
+      <column name="centstatus" type="INT">
+        <constraints nullable="false"/>
+      </column>
+      <column name="operstatus" type="INT">
+        <constraints nullable="false"/>
+      </column>
+      <column name="currstatus" type="INT">
+        <constraints nullable="false"/>
+      </column>
+      <column name="startdate" type="date">
+        <constraints nullable="false"/>
+      </column>
+      <column name="enddate" type="date">
+        <constraints nullable="false"/>
+      </column>
+
+      <column name="livestatus" type="INT">
+        <constraints nullable="false"/>
+      </column>
+    </createTable>
+  </changeSet>
+</databaseChangeLog>

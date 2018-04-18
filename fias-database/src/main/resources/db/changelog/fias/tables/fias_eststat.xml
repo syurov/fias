@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <changeSet author="syurov (generated)" id="fias_eststat">
+    <createTable tableName="fias_eststat" schemaName="fias">
+      <column name="eststatid" type="INT">
+        <constraints nullable="false"/>
+      </column>
+      <column name="name" type="varchar(10)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="shortname" type="varchar(10)"/>
+    </createTable>
+  </changeSet>
+</databaseChangeLog>
