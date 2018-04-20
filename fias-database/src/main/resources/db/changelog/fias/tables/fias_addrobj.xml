@@ -40,6 +40,7 @@
         <constraints nullable="false"/>
       </column>
       <column name="streetcode" type="varchar(4)"/>
+      <column name="plancode" type="varchar(4)"/>
       <column name="extrcode" type="varchar(4)">
         <constraints nullable="false"/>
       </column>
@@ -87,6 +88,7 @@
       <column name="livestatus" type="INT">
         <constraints nullable="false"/>
       </column>
+      <column name="divtype" type="INT"/>
     </createTable>
   </changeSet>
 </databaseChangeLog>

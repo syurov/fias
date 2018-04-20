@@ -9,10 +9,10 @@
       <column name="eststatid" type="INT">
         <constraints nullable="false"/>
       </column>
-      <column name="name" type="varchar(10)">
+      <column name="name" type="varchar(20)">
         <constraints nullable="false"/>
       </column>
-      <column name="shortname" type="varchar(10)"/>
+      <column name="shortname" type="varchar(20)"/>
     </createTable>
   </changeSet>
 </databaseChangeLog>

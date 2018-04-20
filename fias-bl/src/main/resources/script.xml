@@ -7,7 +7,7 @@
 
 
   <connection id="in" driver="janino"/>
-  <connection id="out" driver="spring" url="fiasDataSource">autocommit.size=100</connection>
+  <connection id="out" driver="spring" url="dataSource">autocommit.size=100</connection>
 
   <query connection-id="in">
     import javax.xml.parsers.SAXParser;

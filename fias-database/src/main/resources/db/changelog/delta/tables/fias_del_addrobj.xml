@@ -87,6 +87,7 @@
       <column name="livestatus" type="INT">
         <constraints nullable="false"/>
       </column>
+      <column name="divtype" type="INT"/>
     </createTable>
   </changeSet>
 </databaseChangeLog>

@@ -47,6 +47,8 @@
       <column name="counter" type="INT">
         <constraints nullable="false"/>
       </column>
+      <column name="cadnum" type="varchar(100)"/>
+      <column name="divtype" type="INT"/>
     </createTable>
   </changeSet>
 

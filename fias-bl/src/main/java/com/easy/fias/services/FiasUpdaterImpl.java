@@ -30,6 +30,7 @@ import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.stream.Collectors;
 
 
 @Log4j
@@ -47,7 +48,7 @@ public class FiasUpdaterImpl implements FiasUpdater {
   private File directoryDestination;
 
   @Autowired
-  private List<EtlExecutor> etlExecutorBeans;
+  List<EtlExecutor> etlExecutorBeans;
 
   private DownloadService service;
 
@@ -78,7 +79,7 @@ public class FiasUpdaterImpl implements FiasUpdater {
   }
 
   @Override
-  public void reload() throws Exception {
+  public synchronized void reload() throws Exception {
     log.info("Старт перезагрузки ФИАС");
     addressRepository.deleteIndex();
     log.info("Выключены индексы");
@@ -90,6 +91,9 @@ public class FiasUpdaterImpl implements FiasUpdater {
     log.info("Скачен архив");
     List<File> fileList = unrarFias(file);
     log.info("Распакован архив");
+
+    // удаляем файлы del
+    fileList = fileList.stream().filter(x -> !x.getName().contains("_DEL_")).collect(Collectors.toList());
     loadFias(fileList);
     log.info("Файлы загружены в схему fias");
     addressRepository.createIndex();
@@ -103,7 +107,7 @@ public class FiasUpdaterImpl implements FiasUpdater {
   }
 
   @Override
-  public void up() throws Exception {
+  public synchronized void up() throws Exception {
     log.info("Старт обновления ФИАС");
     List<DownloadFileInfo> allDownloadFileInfo = getAllDownloadFileInfo();
     Version lastVersion = addressRepository.getLastVersion();
@@ -266,22 +270,24 @@ public class FiasUpdaterImpl implements FiasUpdater {
     final URL location = FiasUpdaterImpl.class.getClassLoader().getResource("script.xml");
     ExecutorService threads = Executors.newCachedThreadPool();
 
-    List<Future<Integer>> tasks = new ArrayList<>(files.size());
+    List<Future<Boolean>> tasks = new ArrayList<>(files.size());
+
     for (int i = 0; i < files.size(); i++) {
       final File file = files.get(i);
       final EtlExecutor executor = etlExecutorBeans.get(i);
-      final Logger log1 = log;
+      final Logger logger = log;
       tasks.add(
           threads.submit(() -> {
-
             try {
-              log1.info("\r\nСтарт загрузки файла " + file.getName() + " в " + new Date().toString());
+              logger.info("\r\nСтарт загрузки файла " + file.getName() + " в " + new Date().toString());
+
               HashMap<String, Object> properties = new HashMap<>(2);
 
               String tableName = getTableName(file.getAbsolutePath());
               if (!tableName.equals("fias.")) {
                 properties.put("table", tableName);
                 properties.put("file", file.getAbsolutePath());
+
                 ConfigurationFactory cf = new ConfigurationFactory();
                 cf.setResourceURL(location);
                 cf.setExternalParameters(properties);
@@ -289,36 +295,23 @@ public class FiasUpdaterImpl implements FiasUpdater {
                 executor.execute();
               }
 
-              log1.info("\r\nКонец загрузки файла " + file.getName() + " в " + new Date().toString());
+              logger.info("\r\nКонец загрузки файла " + file.getName() + " в " + new Date().toString());
             } catch (Exception e) {
-              log1.error(e.getMessage(), e);
+              logger.error(e.getMessage(), e);
+              return false;
             }
-            return 1;
+            return true;
           }));
     }
 
-    List<Integer> results = new ArrayList<>();
-    for (Future<Integer> task : tasks)
-      results.add(task.get());
+    for (Future<Boolean> task : tasks) {
+      Boolean res = task.get();
+      if (!res)
+        throw new Exception("Не удалось загрузить файлы ФИАС");
+    }
+
 
     threads.shutdown();
-//        int i = 0;
-//
-//        for (File f : files) {
-//
-//            final File file = f;
-//            final EtlExecutorBean executor = etlExecutorBeans[i++];
-//            final Logger log1 = log;
-//            Thread thread = new Thread(file.getName()) {
-//                @Override
-//                public void run() {
-//
-//                }
-//            };
-//
-//            thread.start();
-//
-//        }
   }
 
   private String getTableName(String fileName) throws Exception {

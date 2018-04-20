@@ -4,50 +4,50 @@
     xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-  <changeSet author="syurov (generated)" id="fias_del_house">
-    <createTable tableName="fias_del_house" schemaName="delta">
-      <column name="houseid" type="uuid">
+  <changeSet author="syurov (generated)" id="fias_stead">
+    <createTable tableName="fias_stead" schemaName="fias">
+      <column name="steadguid" type="uuid">
         <constraints nullable="false"/>
       </column>
-      <column name="houseguid" type="uuid">
+      <column name="steadid" type="uuid">
         <constraints nullable="false"/>
       </column>
-      <column name="aoguid" type="uuid">
-        <constraints nullable="false"/>
-      </column>
+      <column name="parentguid" type="uuid"/>
+      <column name="previd" type="uuid"/>
+      <column name="nextid" type="uuid"/>
       <column name="normdoc" type="uuid"/>
 
+      <column name="number" type="varchar(120)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="regioncode" type="varchar(2)">
+        <constraints nullable="false"/>
+      </column>
       <column name="postalcode" type="varchar(6)"/>
-      <column name="ifnsfl" type="varchar(4)"/>
-      <column name="terrifnsfl" type="varchar(4)"/>
-      <column name="ifnsul" type="varchar(4)"/>
-      <column name="terrifnsul" type="varchar(4)"/>
-      <column name="okato" type="varchar(11)"/>
-      <column name="oktmo" type="varchar(11)"/>
+      <column name="ifnsfl" type="varchar(6)"/>
+      <column name="terrifnsfl" type="varchar(6)"/>
+      <column name="ifnsul" type="varchar(6)"/>
+      <column name="terrifnsul" type="varchar(6)"/>
+      <column name="okato" type="varchar(6)"/>
+      <column name="oktmo" type="varchar(6)"/>
       <column name="updatedate" type="date">
         <constraints nullable="false"/>
       </column>
-      <column name="housenum" type="varchar(20)"/>
-      <column name="eststatus" type="INT">
+      <column name="operstatus" type="INT">
         <constraints nullable="false"/>
       </column>
-      <column name="buildnum" type="varchar(10)"/>
-      <column name="strucnum" type="varchar(10)"/>
-      <column name="strstatus" type="INT"/>
-
       <column name="startdate" type="date">
         <constraints nullable="false"/>
       </column>
       <column name="enddate" type="date">
         <constraints nullable="false"/>
       </column>
-      <column name="statstatus" type="INT">
+      <column name="livestatus" type="INT">
         <constraints nullable="false"/>
       </column>
-      <column name="counter" type="INT">
-        <constraints nullable="false"/>
-      </column>
+      <column name="cadnum" type="varchar(100)"/>
       <column name="divtype" type="INT"/>
+
     </createTable>
   </changeSet>
 </databaseChangeLog>
